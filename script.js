@@ -26,7 +26,7 @@ initializeGame();
 function initializeGame() {
     cells.forEach(cell => cell.addEventListener('click', cellClicked));
     restartBtn.addEventListener('click', restartGame);
-    statusText.textContent = `${currentPlayer}'s turn`;
+    statusText.textContent = `Vez do '${currentPlayer}'`;
     running = true;
 }
 
@@ -48,7 +48,7 @@ function updateCell(cell, index) {
 
 function changePlayer() {
     currentPlayer = (currentPlayer === 'X') ? 'O' : 'X';
-    statusText.textContent = `${currentPlayer}'s turn`;
+    statusText.textContent = `Vez do '${currentPlayer}'`;
 }
 
 function checkWinner() {
@@ -72,12 +72,12 @@ function checkWinner() {
     }
 
     if (roundWon) {
-        statusText.textContent = `${currentPlayer} wins!`;
+        statusText.textContent = `${currentPlayer} ganhou!!`;
         highlightWinningCells(winningCells);
         updateWins();
         running = false;
     } else if (!options.includes('')) {
-        statusText.textContent = 'Draw!';
+        statusText.textContent = 'Empate!';
         running = false;
     } else {
         changePlayer();
@@ -103,7 +103,7 @@ function updateWins() {
 function restartGame() {
     currentPlayer = 'X';
     options = ['', '', '', '', '', '', '', '', ''];
-    statusText.textContent = `${currentPlayer}'s turn`;
+    statusText.textContent = `Vez do '${currentPlayer}'`;
     cells.forEach(cell => {
         cell.textContent = '';
         cell.classList.remove('winning-cell');
