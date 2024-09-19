@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    font-size: 40px;
     text-align: center;
     background-color: rgb(15, 23, 42);
 }
@@ -26,29 +27,28 @@ h1 {
     width: 100px;
     height: 100px;
     border: 2px solid gray;
-    font-size: 2rem;
+    font-size: 32px;
     cursor: pointer;
 }
 
 #restartBtn {
     margin-top: 20px;
     padding: 10px 20px;
-    font-size: 1rem;
+    font-size: 16px;
     cursor: pointer;
 }
 
 #status {
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 30px;
     color: rgb(230, 232, 250);
 }
 
 .counter {
-    font-size: 1.2rem;
+    font-size: 22px;
     color: rgb(230, 232, 250);
 }
 
 .winning-cell {
-    background-color: yellow;
+    background-color: rgb(3, 97, 3);
 }
-
