@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll('.cell');
 const statusText = document.getElementById('status');
 const restartBtn = document.getElementById('restartBtn');
+const resetScoreBtn = document.getElementById('resetScoreBtn');
 const xWinsText = document.getElementById('xWins');
 const oWinsText = document.getElementById('oWins');
 
@@ -26,6 +27,7 @@ initializeGame();
 function initializeGame() {
     cells.forEach(cell => cell.addEventListener('click', cellClicked));
     restartBtn.addEventListener('click', restartGame);
+    resetScoreBtn.addEventListener('click', resetScore);
     statusText.textContent = `Vez do "${currentPlayer}"`;
     running = true;
 }
@@ -109,4 +111,12 @@ function restartGame() {
         cell.classList.remove('winning-cell');
     });
     running = true;
+}
+
+function resetScore() {
+    xWins = 0;
+    oWins = 0;
+
+    xWinsText.textContent = `Vitórias de X: ${xWins}`;
+    oWinsText.textContent = `Vitórias de O: ${oWins}`;
 }

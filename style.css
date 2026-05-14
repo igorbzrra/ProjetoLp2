@@ -31,11 +31,38 @@ h1 {
     cursor: pointer;
 }
 
-#restartBtn {
+#restartBtn,
+#resetScoreBtn {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 12px 22px;
     font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+
+#restartBtn {
+    background-color: rgb(37, 99, 235);
+}
+
+#restartBtn:hover {
+    background-color: rgb(29, 78, 216);
+    transform: scale(1.05);
+}
+
+
+#resetScoreBtn {
+    background-color: rgb(220, 38, 38);
+    margin-left: 10px;
+}
+
+#resetScoreBtn:hover {
+    background-color: rgb(185, 28, 28);
+    transform: scale(1.05);
 }
 
 #status {
